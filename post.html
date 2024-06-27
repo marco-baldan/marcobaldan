@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - Marco Baldan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Marco Baldan</h1>
+            <p>Full Stack Developer</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><button id="theme-toggle" class="theme-toggle">Dark</button></li>
+        </ul>
+    </nav>
+    
+    <section class="container" id="post-content">
+        <h2>Loading...</h2>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Marco Baldan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get('id');
+
+        fetch('posts.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(posts => {
+                const post = posts[postId];
+                if (post) {
+                    const postContentContainer = document.getElementById('post-content');
+                    postContentContainer.innerHTML = `
+                        <h2>${post.title}</h2>
+                        <p class="date">${post.date}</p>
+                        ${post.content}
+                    `;
+                } else {
+                    document.getElementById('post-content').innerHTML = '<p>Post not found.</p>';
+                }
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+                document.getElementById('post-content').innerHTML = '<p>Error loading post.</p>';
+            });
+    </script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
