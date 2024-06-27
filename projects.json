@@ -1,12 +1,12 @@
 [
     {
-        "title": "Project Title 1",
-        "description": "Description of the first project.",
-        "link": "https://example.com/project1"
+        "title": "EPML - Machine Learning Football Outcomes",
+        "description": "This is an multi-modal ML application that uses both Reddit sentiment and Premier League statistical data to calculate football match outcomes. The project tech stack was react.js and Python, hosted on AWS",
+        "link": "https://epml.marcobaldan.co.uk"
     },
     {
-        "title": "Project Title 2",
-        "description": "Description of the second project.",
-        "link": "https://example.com/project2"
+        "title": "Breezy Clean - A property cleaning and maintenance business website",
+        "description": "This website was created to support with business operations. The cleaning company owner choose to use monday.com forms for new enquiries to help with their task tracking. The project tech stack was react.js, hosted on Netlify",
+        "link": "https://breezyclean.co.uk"
     }
 ]
