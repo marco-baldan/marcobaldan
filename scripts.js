@@ -80,4 +80,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 blogPostsContainer.innerHTML = '<p>Error loading blog posts.</p>';
             });
     }
+
+    // Function to remove HTML tags from a string
+    function removeHtmlTags(str) {
+        return str.replace(/<\/?[^>]+(>|$)/g, "");
+    }
+    const contentElement = document.getElementById('content');
+    if (contentElement) {
+        contentElement.innerHTML = removeHtmlTags(contentElement.innerHTML);
+    }
 });

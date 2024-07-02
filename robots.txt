@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /scripts.js
+Disallow: /styles.css
+Disallow: /personal.jpg
+Disallow: /github-icon-black.svg
+Disallow: /LinkedIn-logo.png
+Disallow: /outlook-logo.svg
+Disallow: /medium_logo.svg
+Disallow: /manifest.json
+
+Sitemap: http://www.marcobaldan.co.uk/sitemap.xml

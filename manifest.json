@@ -1,0 +1,37 @@
+{
+    "lang": "en",
+    "dir": "ltr",
+    "name": "Marco Baldan - Personal Website",
+    "description": "This is my personal website, showcasing my work as a Full Stack Developer and ML Enthusiast.",
+    "short_name": "Marco Baldan",
+    "icons": [
+      {
+        "src": "favicon.ico",
+        "sizes": "64x64",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "personal-64x64.jpg",
+        "sizes": "64x64",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "personal-128x128.jpg",
+        "sizes": "128x128",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "personal-192x192.jpg",
+        "sizes": "192x192",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "personal-256x256.jpg",
+        "sizes": "256x256",
+        "type": "image/jpeg"
+      }
+    ],
+    "display": "fullscreen",
+    "orientation": "portrait"
+  }
+  
